@@ -204,62 +204,62 @@ Gamit ang interoperable na mga serbisyo na binigay ng digital asset na interface
 
 Ang bawat program ng matalinong kontrata na naka-deploy sa NEO blockchain, ay magkakaroon ng isang pribadong storage na lawak na maaari lamang mabasa at masulatan ng kontrata mismo. Ang mga matalinong kontrata ay may buong gumaganang mga permiso sa datos sa sarili nitong imbakan: maaaring basahin, sulatan, baguhin, at burahin. Ang datos ay nakaimbak sa porma ng key-value na pares at nagbibigay nitong mga interface:
 
- * Traverse all the records stored
- * Return to a specific record according to the specified key
- * Modify or write new records according to the specified key
- * Delete the record according to the specified key
+ * Tatawid sa lahat ng mga rekord na nakaimbak
+ * Babalik sa isang tiyak na rekord ayon sa natukoy na key
+ * Babaguhin o susulat ng bagong mga rekord ayon sa natukoy na key
+ * Buburahin ang rekord ayon sa natukoy na key
 
-In general, a contract can only read and write data from its own store, with one exception: when a contract is invoked, the invoked contract can access the caller's store through a cross-domain request, provided that the caller provides authorization. In addition, for a sub-contract that is dynamically created at the time of contract execution, the parent contract gets instant access to its store.
+Sa pangkalahatan, ang isang kontrata ay maaari lamang magbasa at magsulat ng datos mula sa sarili nitong store, na may isang pagbubukod: kapag ang isang kontrata ay natawag, ang natawag na kontrata ay maaaring mag-access ng store ng tumatawag gamit ang isang cross-domain na kahilingan, kung ang tumatawag ay nagbibigay ng awtorisasyon. Sa karagdagan, para sa isang sub-contract na dynamic na nalikha sa panahon sa pagpapatupad ng kontrata, ang magulang na kontrata ay kukuha ng madaliang access sa store nito.
 
-Cross-domain requests enable NeoContract to implement rich library capabilities, that provide highly scalable data management capabilities for the callers.
+Ang cross-domain na mga kahilingan ay nagbibigay ng kakayahan sa NeoContract upang magpatupad ng rich library na mga kakayahan, na nagbibigay ng mataas na kakayahan sa pag-iskala na data management na mga kakayahan para sa mga tumatawag.
 
-## 7. Fees
+## 7. Mga Bayad
 
-### 7.1 Deployment Fee
+### 7.1 Bayad ng Pag-deploy
 
-NEO's distributed architecture provides high redundancy of storage capacity, and the use of this capacity is not free. Deploying a smart contract on the NEO network requires a fee, currently fixed at 500GAS, which is collected by the system and recorded as a system gain. Future fees will be adjusted according to the actual operating cost in the system. The smart contract deployed on the blockchain can be used multiple times, until the contract is destroyed by the deployer.
+Ang naipamahaging arkitektura ng NEO ay nagbibigay ng mataas na kalabisan sa kapasidad ng imbakan, at ang gamit ng kapasidad na ito ay hindi libre. Ang pagde-deploy ng isang matalinong kontrata sa NEO na network ay nangangailangan ng isang bayad, kasalukuyang nakapirmi sa 500GAS, na kinukolekta ng sistema at tinatala bilang isang kita ng sistema. Ang hinaharap na mga bayad ay inaakma ayon sa aktwal na gumaganang gastos ng sistema. Ang matalinong kontrata na naka-deploy sa blockchain ay maaaring gamitin nang maraming beses, hanggang ang kontrata ay nawasak ng nag-deploy.
 
-### 7.2 Implementation Fee
+### 7.2 Bayad ng Implementasyon
 
-NEO provides a credible execution environment for smart contracts, and the execution of contracts requires the consumption of computing resources for each node, therefore users are required to pay for the execution of smart contracts. The fee is determined by the computational resources consumed with each execution, and the unit price is also in GAS. If the implementation of the smart contract fails due to lack of GAS, the cost of consumption will not be returned, and this prevents malicious attacks on the network power consumption.
+Ang NEO ay nagbibigay ng isang mapaniniwalaang execution environment para sa mga matalinong kontrata, at ang pagpapatupad ng mga kontrata ay nangangailangan ng pagkonsumo ng mga computing resource para sa bawat node, samakatuwid ang mga gumagamit ay kinakailangang magbayad para sa pagpapatupad ng mga matalinong kontrata. Ang bayad ay nakatukoy sa mga computational resource na nakonsumo sa bawat pagpapatupad, at ang yunit na presyo ay nasa GAS din. Kung ang pagpapatupad ng matalinong kontrata ay mabibigo dahil sa kakulangan ng GAS, ang presyo ng pagkonsumo ay hindi maisasauli, at iiwasan nito ang may masamang hangarin na mga atake sa network power na pagkonsumo.
 
-For most simple contracts, they can be executed for free, so long as the execution costs remain under 10 GAS, thus greatly reducing costs for the user. 
+Para sa kadalasang simpleng mga kontrata, ang mga ito ay maaaring maipatupad nang libre, hangga't ang pagpapatupad na mga halaga ay nananatiling mababa pa sa 10 GAS, kaya naman lubhang nababawasan ang mga halaga para sa gumagamit.
 
-## 8. Application Scenarios
+## 8. Application na mga Sitwasyon
 
-### 8.1 Superconducting Transactions
+### 8.1 Pag-superconduct ng mga Transaksyon
 
-Digital assets on the blockchain inherently require some form of liquidity and usually point-to-point transactions cannot provide it sufficiently.  Therefore, there is a need for exchanges to provide users with trading services. Digital asset exchanges can be broadly divided into two categories:
+Ang mga digital asset sa blockchain ay kadikit na nangangailangan ng ilang porma ng liquidity at kadalasan ang punto-per-punto na mga transaksyon ay hindi sapat na naibibigay ito. Samakatuwid, may isang pangangailangan para sa pagpapalitan upang mabigyan ang mga gumagamit ng pangkalakal na mga serbisyo. Ang digital asset na mga pagpapalitan ay maaaring malawak na mahahati sa dalawang mga kategorya:
 
-1. **Central exchanges:** where the user needs to deposit the digital assets with the exchange, and subsequent place pending orders for trading, on the website
-2. **Decentralized exchanges:** where its trading system is built into the blockchain, and the system provides the matching services.
+1. **Sentral na mga pagpapalitan:** kung saan ang gumagamit ay kailangang magdeposito ng mga digital asset gamit ang pagpapalitan, at kasunod na maglagay ng nakabinbin na mga order para sa kalakalan, sa website
+2. **Desentralisadong mga pagpapalitan:** kung saan ang kalakalang sistema nito ay nabuo sa blockchain, at ang sistema ay nagbibigay ng tumutugmang mga serbisyo.
 
-Centralized exchanges can provide very high performance and diversified services, but need to have a strong credit guarantee, otherwise there will be moral hazards; such as misappropriation of user funds, fraud, etc. Comparatively, decentralized exchange has no moral hazard, but the user experience is poor, and there is greater performance bottleneck. Is there a way to combine both solutions and achieve the best of both worlds?
+Ang sentralisadong mga pagpapalitan ay maaaring magbigay ng sobrang napakataas na pagganap at sari-saring mga serbisyo, ngunit kailangang magkaroon ng isang malakas na credit na garantiya, kung hindi man ay magkakaroon ng moral na mga panganib; katulad ng maling paggamit ng mga pondo ng gumagamit, panloloko, etc. Kung pagpaparisin, ang desentralisadong pagpapalit ay walang moral na panganib, ngunit ang karanasan ng gumagamit ay hindi mabuti, at magkakaroon ng higit pang bottleneck sa pagganap. Mayroon bang isang paraan upang mapagsama ang parehong mga solusyon at makamit ang pinakamahusay sa parehong mundo?
 
-Superconducting transactions is a mechanism that can do this; Users do not need to deposit assets, where they are able to use their own assets on the blockchain in trading. Transaction settlement complete on the blockchain, but the process of matching orders occurs off-chain, by a central exchange that provides matching services. Since the matching is conducted off-chain, its efficiency is like centralized exchanges, but the assets remain under the control of the user. Exchanges uses the user's trading intent to carry out matching services, with no moral hazards involved, such as misappropriation of user funds, fraud, etc.
+Ang pag-superconduct ng mga transaksyon ay isang mekanismo na maaaring makakagawa nito; Ang mga gumagamit ay hindi na kailangang magdeposito ng mga asset, kung saan sila ay maaaring gumamit ng kanilang sariling mga asset sa blockchain sa kalakalan. Ang kasunduan ng transaksyon na nakumpleto sa blockchain, ngunit ang proseso ng pagtutugma ng mga order ay ay nagaganap sa off-chain, gamit ang isang sentral na pagpapalit na nagbibigay ng pagtutugma na mga serbisyo. Dahil ang pagtutugma ay nagaganap sa off-chain, ang kahusayan nito ay katulad ng sentralisadong mga pagpapalitan, ngunit ang mga asset na nananatiling nasa ilalim ng kontrol ng gumagamit. Ang mga pagpapalitan ay gumagamit ng pangkalakal na layunin ng gumagamit upang maisakatuparan ang pagpapatupad ng mga serbisyo, nang walang moral na mga panganib na kasangkot, katulad ng maling paggamit ng mga pondo ng gumagamit, panloloko, etc.
 
-At present, within the NEO community, development of smart contracts to achieve blockchain superconducting transactions has emerged, such as OTCGO.
+Sa kasalukuyan, sa loob ng kumunidad ng NEO, ang pag-develop ng mga matalinong kontrata upang makamit ang pag-superconduct ng blockchain na mga transaksyon ay lumitaw, katulad ng OTCGO.
 
-### 8.2 Smart Fund
+### 8.2 Matalinong Pondo
 
-Smart funds based on the blockchain have the benefit of being decentralized, open and transparent, possessing a higher degree of security and freedom as compared to traditional funds. These smart funds are also cross-border and open to investors worldwide, where outstanding projects can be funded with capital from all across the world.
+Ang mga matalinong pondo ay nakabatay sa pagkakaroon ng benepisyo ng blockchain bilang desentralisado, bukas at madaling maunawaan, nagtataglay ng isang mas mataas na antas ng seguridad at kalaay kumpara sa tradisyonal na mga pondo. Ang mga matalinong pondo na ito ay cross-border at bukas rin sa mga mamumuhunan sa buong mundo, kung saan ang mga tanyag na proyekto ay maaaring pondohan gamit ang kapital mula sa lahat sa buong mundo.
 
-Nest is a NeoContract-based smart fund project, which is very similar to the TheDAO project based on Ethereum, where improved security measures is needed to avoid the mistakes of TheDAO (hackers).
+Ang Nest ay isang nakabase sa NeoContract na matalinong pondo na proyekto, na sobrang katulad sa TheDAO na proyekto batay sa Ethereum, kung saan ang pinabuting mga panukala sa seguridad ay kinakailangan upang maiwasan ang mga pagkakamali ng TheDAO (mga hacker).
 
 ### 8.3 Cross-chain Interoperability
 
-In the foreseeable future, there will be many public chains and thousands of alliance chains or private chains in existence worldwide. These isolated blockchain systems are islands of value and information, which are not interoperable with each other. Through the cross-chain interoperability mechanism, numerous isolated blockchains can be linked, so that the values in different blockchains can be exchanged with each other, to achieve the true value of the Internet.
+Sa nakikinitang hinaharap, magkakaroon ng maraming mga publikong chain at libu-libong mga alyansa ng chain o mga pribadong chain na iiral sa buong mundo. Ang mga magkahiwalay na mga blockchain na sistemang ito ay mga isla ng halaga at impormasyon, na hindi interoperable sa isa't isa. Gamit ang cross-chain interoperability na mekanismo, maraming magkahiwalay na mga blockchain ang maaaring iugnay, upang ang mga halaga sa magkaibang mga blockchain ay maaaring ipagpalit sa isa't sa, upang makamit ang tunay na halaga ng Internet.
 
-NeoContract provides support for the implementation of cross-chain interoperability, ensuring consistency within cross-chain asset exchange, cross-chain distributed transactions, and execution of smart contracts on different blockchains.
+Ang NeoContract ay nagbibigay ng suporta para sa implementasyon ng cross-chain interoperability, sinisigurado ang pakakaalinsunod sa loob ng cross-chain asset na pagpapalitan, cross-chain na ibinahaging mga transaksyon, at pagpapatupad ng mga matalinong kontrata sa magkaibang mga blockchain.
 
-### 8.4 Oracle Machines
+### 8.4 Orakulo na mga Makina
 
-The concept of oracles in folktale lies in the ability of a certain supernatural entity that can answer a particular set of questions. In the blockchain, oracle machines open the door to the outside world for smart contracts, making it possible for smart contracts to use real-world information as a condition for contract execution.
+Ang konsepto ng mga orakulo sa katutubong kuwento ay nakabatay sa abilidad ng isang tiyak na sobrenatural na katauhan na maaaring sumagot sa isang partikular na hanay ng mga tanong. Sa blockchain, ang orakulo na mga makina ay bukas na pinto sa panlabas na mundo para sa mga matalinong kontrata, ginagawang posible para sa mga matalinong kontrata ang paggamit ng tunay na mundong impormasyon bilang isang kondisyon para sa pagpapatupad ng kontrata.
 
-NeoContract does not provide the ability to directly access external data, such as access to resources on the Internet, because this will introduce non-deterministic behavior, resulting in inconsistencies between nodes during contract execution. Implementing the oracle machine in NeoContract requires that external data be sent to the blockchain by a trusted third party, integrating these data feeds as part of the blockchain ledger, thereby eliminating non-determinism.
+Ang NeoContract ay hindi nagbibigay ng abilidad upang direktang mag-access ng panlabas na datos, tulad ng access sa mga resource sa Internet, dahli ito ay magpapakilala ng non-deterministic na pagkilos, nagreresulta sa mga hindi pagkakaalinsunod sa pagitan ng mga node habang nagpapatupad ng kontrata. Ang pagpapatupad ng orakulo na makina sa NeoContract ay nangangailangan na ang panlabas na datos ay napadala sa blockchain gamit ang isang inaasahang pangatlong partido, pinagsasama ng mga data feed na ito bilang parte ng blockchain ledger, sa gayon ay tinatanggal ang non-determinism.
 
-The credible third party mentioned above, may be a person or institution that is co-trusted by both parties in the contract, or a decentralized data provider that is guaranteed by economic incentives. In this manner, NeoContract can be used in the implementation of such Oracle machines.
+Ang kapani-paniwala pangatlong partido na binanggit sa itaas, maaaring isang tao o institusyon na pinagkatiwalaan sa parehong partido sa kontrata, o isang desentralisadong data provider na garantisado ng mga pang-ekonomiyang insentibo. Sa ganitong paraan, ang NeoContract ay maaaring gamitin sa implementasyon ng ganitong mga Orakulong makina.
 
 ### 8.5 Ethereum DAPP
 
-Bitcoin created the era of blockchains and electronic cash, and Ethereum created the era of smart contracts. Ethereum, the pioneers of smart contract on the blockchain, has made great contributions to the design idea, economic model and technological realization of a smart contract system. At the same time, the Ethereum platform has seen many DAPPs (distributed applications), where functionalities including: gambling agreements, digital assets, electronic gold, gaming platform, medical insurance, marriage platform, with widespread use over many industries. In theory, all of these DAPPs can be easily transplanted onto the NeoContract platform, as a NEO application.
+Ang Bitcoin na ay gumawa ng kapanahunan ng mga blockchain at elektronikong salapi, at ang Ethereum ay gumawa ng kapanahunan ng mga matalinong kontrata. Ang Ethereum, ang tagapanguna ng matalinong kontrata sa blockchain, ay nakagawa ng dakilang mga kontribusyon sa disenyong ideya, ekonomikong modelo at teknolohikal na pagsasakatuparan ng matalinong kontratang sistema. Sa parehong panahon, ang Ethereum na plataporma ay nakakita ng maraming mga DAPP (distributed applications), kung saan ang mga functionality ay nagsasama ng: mga kasunduan sa pagsusugal, mga digita asset, elektronikong ginto, plataporma sa paglalaro, medikal na insurance, pangkasal na plataporma, na kalat na kalat na paggamit sa maraming industriya. Sa teorya, ang lahat ng mga DAPP na ito ay maaaring madaling mailipat sa NeoContract na plataporma, bilang isang NEO na aplikasyon.
