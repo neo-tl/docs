@@ -93,7 +93,7 @@ Ang coupling ay isang sukatan ng dependensya sa pagitan ng dalawa o maraming mga
 
 ### 3.1 Beripikasyon ng Kontrata
 
-Hindi tulad ng public-key account na sistema na ginamit sa Bitcoin, ang account na sistema ng NEO ay gumagamit ng kontratang account na sistema. Ang bawat account sa NEO ay tumutugon sa isang beripikasyong kontrata, at ang hash na halaga ng beripikasyong kontrata, ay ang account address; Ang program na lohika ng beripikasyong kontrata ay kumukontrol sa pagmamay-ari ng account. Kapag naglilipat mula sa isang account, una mong kakailanganing magpatupad ng beripikasyong kontrata para sa account na iyon. Ang balidasyong kontrata ay maaaring tumanggap ng isang hanay ng mga parameter (kadalasan ang isang digital signature o ibang pamantayan), at nagsasauli ng isang boolean na halaga pagkatapos ng beripikasyon, nagpapahiwatig sa tagumpay ng beripikasyon sa sistema.
+Hindi tulad ng public-key account na sistema na ginamit sa Bitcoin, ang account na sistema ng NEO ay gumagamit ng kontratang account na sistema. Ang bawat account sa NEO ay tumutugon sa isang beripikasyong kontrata, at ang hash na halaga ng beripikasyong kontrata, ay ang account address; Ang program na lohika ng beripikasyong kontrata ay kumukontrol sa pagmamay-ari ng account. Kapag naglilipat mula sa isang account, una mong kakailanganing magpatupad ng beripikasyong kontrata para sa account na iyon. Ang balidasyong kontrata ay maaaring tumanggap ng isang hanay ng mga parametro (kadalasan ang isang digital signature o ibang pamantayan), at nagsasauli ng isang boolean na halaga pagkatapos ng beripikasyon, nagpapahiwatig sa tagumpay ng beripikasyon sa sistema.
 
 Ang user ay maaari munang mag-deploy ng beripikasyong kontrata sa blockchain, o mag-publish ng kontratang nilalaman nang direkta sa transaksyon habang nasa paglipat na proseso.
 
@@ -117,91 +117,92 @@ Ang NeoVM ay nagbibigay ng isang birtwal na hardware layer, upang sumuporta ng m
 
  * **CPU**
 
- CPU is responsible for reading and sequentially order the execution of instructions in the contract, according to the function of the instruction flow control, arithmetic operations, logic operations. The future of the CPU function can be extended, with the introduction of JIT (real-time compiler) function, thereby enhancing the efficiency instruction execution. 
+ Ang CPU ay responsable para sa pagbabasa at magkakasunod na pagkakaayos ng pagpapatupad ng mga instruksyon sa kontrata, ayon sa punsyon ng flow control ng instruksyon, aritmetikang mga operasyon, lohikang mga operasyon. Ang hinaharap ng CPU na punsyon ay maaaring mapalawak, gamit ang pagpapakilala ng JIT (real-time na kompayler) na punsyon, sa gayon ay nagpapabuti sa kahusayan na pagpapatupad ng instruksyon.
 
  * **Call Stack**
 
-   The call stack is used to hold the context information of the program execution at each function call, so that it can continue to execute in the current context after the function has finished executing and returning.
+   Ang call stack ay ginagamit upang maghawak ng mga kontekstong impormasyon ng pagpapatupad ng program sa bawat pagtawag ng punsyon, upang ito ay maaaring magpatuloy sa pagpapatupad sa kasalukuyang konteksto pagkatapos ng pagpapatupad at pagsasauli ng punsyon.
 
  * **Calculate Stack**
 
-   All NeoVM run-time data are stored in the calculation stack, when after the implementation of different instructions, the stack will be calculated on the corresponding data elements of the operation. For example, when additional instructions are executed, the two operations participating in the addition are ejected from the calculation stack, and the result of the addition is pushed to the top of the stack. Function call parameters must also be calculated from right to left, according to the order of the stack. After the function is successfully executed, the top of the stack fetch-function returns the value.
+   Ang lahat ng run-time na datos ng NeoVM ay naka-imbak sa kalkulasyon na stack, kung kailan matatapos ang implementasyon ng magkaibang mga instruksyon, ang stack ay ikakalkula sa nararapat na mga elemento na datos sa operasyon. Halimbawa, kapag ang karagdagang mga instruksyon ay naipatupad, ang dalawang mga operasyon na lumalahok sa pagdaragdag ay papaalisin mula sa kalkulasyon na stack, at ang resulta ng pagdaragdag ay itutulak sa itaas ng stack. Ang mga parametro sa pagtawag ng punsyon ay dapat ding makalkula mula sa kanan patungo sa kaliwa, ayon sa pakakaayos ng stack. Pagkatapos ng matagumpay na pagpatupad ng punsyon, ang nasa itaas ng stack fetch-function ay magsasauli ng halaga.
 
  * **Spare Stack**
 
-  When you need to schedule or rearrange elements in the stack, you can temporarily store the elements in the spare stack and retrieve them in the future.
+  Kapag kailangan mong mag-iskedyul o mag-ayos muli ng mga elemento sa stack, maaari mong pansamantalang iimbak ang mga elemento sa spare stack at kunin ang mga ito sa hinaharap.
 
-### 4.2 Instruction set
+### 4.2 Pangkat ng instruksyon 
 
-NeoVM provides a set of simple, and practical instructions for building smart contract programs. According to functions, the main categories are as follows:
+Ang NeoVM ay nagbibigay ng isang pangkat ng simple, at praktikal na mga instruksyon para sa pagbubuo ng matalinong kontratang mga program.
+Ayon sa mga punsyon, ang pangunahing mga kategorya ay ang mga sumusunod:
 
- * Constant instruction
- * Process control instruction
- * Stack operation instruction
- * String instruction
- * Logic instruction
- * Arithmetic operation instruction
- * Cryptographic instruction
- * Data operation instruction
+ * Constant na instruksyon
+ * Prosesong kontrol na instruksyon
+ * Stack na operasyon na instruksyon
+ * String na instruksyon
+ * Lohikang instruksyon
+ * Aritmetikang operasyon na instruksyon
+ * Cryptographic na instruksyon
+ * Datos na operasyon na instruksyon
 
-It is worth noting that the NeoVM instruction set provides a series of cryptographic instructions, such as ECDSA, SHA and other algorithms to optimize the implementation efficiency of cryptographic algorithms in smart contracts. In addition, data manipulation instructions directly support arrays and complex data structures.
+Mahalagang tandaan na ang NeoVM na pangkat ng instruksyon ay nagbibigay ng isang serye ng cryptographic na mga instruksyon, katulad ng ECDSA, SHA at iba pang mga algoritmo upang mas mapabuti ang kahusayan ng implementasyon ng cryptographic na mga algoritmo sa mga matalinong kontrata. Sa karagdagan, ang pagmanipula ng datos na mga instruksyon ay direktang sumusuporta ng mga array at kumplikadong mga istraktura ng datos.
 
-### 4.3 Interoperable service layer
+### 4.3 Interoperable na service layer
 
-The virtual machine where smart contract executes is a sandbox environment, that requires an interoperable service layer, in times when it needs to access data outside of the sandbox or to keep the run-time data persistent. Within the interoperable service layer, NEO contract can open a series of system function and services with the smart contract program, and these contracts can be called and accessed, like ordinary functions. All system functions are being conducted concurrently, so there is no need to worry about scalability.
+Ang birtwal na makina kung saan ipinapatupad ang matalinong kontrata ay isang sandbox environment, na nangangailangan ng isang interoperable na service layer, sa mga panahon kapag ito ay kailangang mag-access ng datos sa labas ng sandbox o upang panatilihing matiyaga ang run-time na datos. Sa loob ng interoperable na service layer, ang NEO na kontrata ay maaaring magbukas ng isang serye ng sistema na punsyon at mga serbisyo gamit ang program ng matalinong kontrata, at mga kontratang ito ay maaaring matawag at ma-access, kagaya ng ordinaryong mga punsyon. Ang lahat ng mga sistema na punsyon ay kasabay na isinasagawa, kaya hindi na kailangang mangamba tungkol sa kakayahan sa pag-iskala.
 
-### 4.4 Debugging Function	
+### 4.4 Punsyon ng Pag-debug	
 
-Often, the development of smart contracts is very difficult, due to the lack of good debugging and testing methods. NeoVM provides program debugging support at the virtual machine level, where you can set the breakpoint on the contract code, or single-step, single-process execution. Thanks to the low coupling design between the virtual machine and the blockchain, it is easy to integrate NeoVM directly with various IDEs, to provide a test environment that is consistent with the final production environment.
+Kadalasan, ang pag-develop ng mga matalinong kontrata ay napakahirap, dahil sa kakulangang ng mabuting debugging at testing na mga pamamaraan. Ang NeoVM ay nagbibigay ng program debugging na supporta at ang birtwal na makinang lebel, kung saan maaari mong itakda ang breakpoint sa kontratang code, o single-step, single-process na pagpapatupad. Salamat sa mababang coupling na disenyo sa pagitan ng birtwal na makina at ang blockchain, madaling direktang pagsamahin ang NeoVM sa iba't ibang mga IDE, upang magbigay ng isang test na enviroment na naaalinsunod sa huling produksyon na environment.
 
-## 5. High-level language
+## 5. Mataas na lebel na lengguwahe
 
 ### 5.1 C#, VB.Net, F#
 
-Developers can use NeoContract for almost any high-level language they are good at. The first batch of supported languages ​​are C #, VB.Net, F #, etc. We provide compilers and plug-ins for these languages, ​​allowing compilation of these high-level language into the instruction set, supported by NeoVM. As the compiler focus on MSIL (Microsoft intermediate language) during compilation, so theoretically, any. Net language can be translated into MSIL language, and become directly supported.
+Ang mga developer ay maaaring gumamit ng NeoContract para sa halos anumang mataas na lebel na lengguwahe kung saan sila mahusay. Ang unang pangkat ng suportadong mga lengguwahe ay C #, VB.Net, F #, etc. Nagbigay kami ng mga kompayler at mga plug-in para sa mga lengguwaheng ito, na nagpapahintulot sa pagkompayl nitong mga mataas na lebel na lengguwahe sa hanay ng instruksyon, na suportado ng NeoVM. Habang ang kompayler ay nakatutok sa MSIL (Microsoft intermediate language) sa panahon ng pagkompayl, kaya batay sa teorya, kahit anong. Net na lengguwahe ay maaaring isalin sa MSIL na lengguwahe, at maging direktang suportado.
 
-A huge number of developers are proficient in these languages, and the above languages have a very strong integrated development environment. Developers can develop, generate, test and debug, all within Visual Studio, where they are able to take full advantage of the smart contract development templates we provide, to gain a head start.
+Isang malaking bilang ng mga developer ay mahuhusay sa mga lengguwaheng ito, at ang nasa itaas na mga lengguwahe ay may isang napalakas na integrated development na environment. Ang mga developer ay maaaring mag-develop, bumuo, sumubok at mag-debug, lahat sa loob ng Visual Studio, kung saan sila ay maaaring buong makakagamit ng mga development template ng matalinong kontrata na binigay namin, upang makamit ang isang pangunahing panimula.
 
 ### 5.2 Java, Kotlin
 
-Java and Kotlin ​​forms the second batch of supported languages, where we provide compilers and IDE plugins for these languages, ​​to help developers use the JVM-based language to develop NEO's Smart Contract applications.
+Ang Java at Kotlin ay bumubuo sa pangalawang pangkat ng suportadong mga lengguwahe, kung saan nagbigay kami ng mga kompayler at IDE na mga plugin para sa mga lengguwaheng ito, upang tulungan ang mga developer sa paggamit ng nakabase sa JVM na lengguwahe upang mag-develop sa Matalinong Kontratang mga aplikasyon ng NEO.
 
-Java is widely used, and Kotlin has recently become the official Google recommended, Android-development language. We believe that supporting these languages will help drastically increase the number of NEO smart contract developers.
+Ang Java ay malawakang ginagamit, at ang Kotlin ay kamakailang naging opisyal na rekomendado ng Google, Android-development na lengguwahe. Naniniwala kami na ang pagsuporta sa mga lengguwaheng ito ay tutulong sa lubhang pagtaas ng bilang ng mga developer ng matalinong kontrata ng NEO. 
 
-### 5.3 Other Languages
+### 5.3 Ibang mga Lengguwahe
 
-Afterwards, NeoContract will add support for other high-level languages, based on the degree of difficulty, in the complier development process. Some of the languages that may be supported, include:
+Pagkatapos, ang NeoContract ay magdaragdag ng suporta para sa ibang mataas na lebel na mga lengguwahe, batay sa antas ng kahirapan, sa proseso ng development ng kompayler. Ang ilang mga lengguwahe na maaaring nasuportahan, ay kabilang ang:
 
  * C, C++, GO
  * Python, JavaScript
 
-In the future, we will continue to add more high-level language support. Our goal is to see more than 90% of NEO developers developing with NeoContract, without needing to learn a new language, and even possibly transfer existing business system code directly onto the blockchain.
+Sa hinaharap, patuloy kaming magdaragdag ng marami pang suporta ng mataas na lebel na lengguwahe. Ang aming layunin ay makakita ng higit pa sa 90% ng mga developer ng NEO na nagde-develop gamit ang NeoContract, nang hindi nangangailangang mag-aral ng isang panibagong lengguwahe, at kahit posibleng direktang maglipat ng umiiral na pangnegosyong sistema na code tungo sa blockchain.
 
-## 6. Service	
+## 6. Serbisyo	
 
-### 6.1 Blockchain Ledger
+### 6.1 Blockchain na Ledger
 
-NEO Smart Contracts can obtain complete block data for the NEO blockchain, including complete blocks and transactions, and each of their fields, at runtime, through the system functions provided by the interoperable service. Specifically, you can query these data:
+Ang mga Matalinong Kontrata ay maaaring makakuha ng kumpletong bloke na datos para sa NEO blockchain, kabilang na ang kumpletong mga bloke at mga transaksyon, at bawat mga field nito, sa runtime, gamit ang sistema na mga punsyong binigay ng interoperable na serbisyo. Sa partikular, maaari kang mag-query ng mga datos na ito:
 
- * Height of the blockchain
- * Block head, current block
- * Transactions
- * Type of transaction, attributes, input, output, etc.
+ * Taas ng blockchain
+ * Block head, kasalukuyang block
+ * Mga transaksyon
+ * Uri ng transaksyon, mga katangian, input, awtput, etc.
 
-Through these data, you can develop some interesting applications, such as automatic payouts, smart contracts based upon proof of workload.
+Gamit ang mga datos na ito, maaari kang mag-develop ng ilang kawili-wiling mga aplikasyon, katulad ng isang awtomatikong mga payout, mga matalinong mga kontrata batay sa pagpapatunay ng workload.
 
-### 6.2 Digital Assets
+### 6.2 Mga Digital Asset
 
-Through the interoperable services provided by the digital asset interface, smart contracts not only can query the NEO blockchain on properties and statistics of various digital assets, but also, create new digital assets during its run-time. Digital assets created by smart contracts can be issued, transferred, traded outside of the contract. They are the same as original assets on NEO, and can be managed with any NEO-compatible, wallet software. This specific interface includes:
+Gamit ang interoperable na mga serbisyo na binigay ng digital asset na interface, ang mga matalinong kontrata ay maaari lamang mag-query ng NEO blockchain sa mga katangian at mga istatistika ng iba't ibang mga digital asset, ngunit, bumuo rin ng panibagong mga digital asset habang nasa run-time nito. Ang mga digital asset na nalikha ng mga matalinong kontrata maaaring iisyu, ilipat, mapalitan sa labas ng kontrata. Sila ay kapareho sa orihinal na mga asset sa NEO, at maaaring mapamahalaan gamit ang anumang NEO-compatible, wallet na software. Ang tiyak na interface na ito ay kabilang ang:
 
- * Asset attribute inquiry
- * Asset statistics query
- * Asset life cycle management: create, modify, destroy, etc.
- * Asset management: multi-language name, total change, precision change, changes in the administrator
+ * Asset attribute na pag-usisa
+ * Asset statistics na query
+ * Asset life cycle na pamamahala: paglikha, pagbago, pagwasak, etc.
+ * Asset na pamamahala: multi-language na pangalan, kabuuang pagbabago, katumpakang pagbabago, mga pagbabago sa administrador
 
-### 6.3 Persistence
+### 6.3 Pagtitiyaga
 
-Each smart contract program deployed on the NEO blockchain, will have a private storage area that can only be read and written by the contract itself. Smart contracts have full operational permissions on the data in its own store: can be read, written, modified, deleted. The data is stored in the form of key-value pairs and provides these interfaces:
+Ang bawat program ng matalinong kontrata na naka-deploy sa NEO blockchain, ay magkakaroon ng isang pribadong storage na lawak na maaari lamang mabasa at masulatan ng kontrata mismo. Ang mga matalinong kontrata ay may buong gumaganang mga permiso sa datos sa sarili nitong imbakan: maaaring basahin, sulatan, baguhin, at burahin. Ang datos ay nakaimbak sa porma ng key-value na pares at nagbibigay nitong mga interface:
 
  * Traverse all the records stored
  * Return to a specific record according to the specified key
