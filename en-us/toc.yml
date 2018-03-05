@@ -11,9 +11,9 @@
       href: node/setup.md
     - name: Test Network
       href: node/testnet.md
-    - name: Using NEO-GUI Client
+    - name: Using NEO-GUI
       href: node/gui.md
-    - name: Using NEO-CLI Client
+    - name: Using NEO-CLI
       href: node/cli.md
     - name: Private Chain
       href: node/private-chain.md
@@ -180,6 +180,11 @@
     - name: System Fees
       href: sc/systemfees.md
 - name: Document for Exchange Developers
-  href: exchange.md
+  href: exchange/general.md
+  items:
+    - name: v2.7.1
+      href: exchange/v2.7.1.md
+    - name: v2.6.0
+      href: exchange/v2.6.0.md
 - name: Contributors
   href: contributors.md
