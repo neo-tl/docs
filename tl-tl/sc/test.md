@@ -59,9 +59,9 @@ namespace ConsoleApplication1
 
             using (ScriptBuilder sb = new ScriptBuilder())
             {
-                sb.EmitPush(2); // tumutugma sa c na parametero
-                sb.EmitPush(4); // tumutugma sa b na parametero
-                sb.EmitPush(3); // tumutugma sa a na parametero
+                sb.EmitPush(2); // tumutugma sa c na parametro
+                sb.EmitPush(4); // tumutugma sa b na parametro
+                sb.EmitPush(3); // tumutugma sa a na parametro
                 engine.LoadScript(sb.ToArray());
             }
 
@@ -85,7 +85,7 @@ Output sa pag-compile: Resulta ng eksekyusyon ay 14, tulad ng inaasahan
 >
 > Pwede kang magdagdag ng isang reference sa “System.Numerics” para maresolba ang problema。
 
-Tandaan: Kung gagamit ka ng code sa itaas para pumasa ng mga parametero, bigyang pansin ang nasa taas ng stack na naaayon sa unang parametro, pwede ring ipasa ang mga parametro gamit ang sumusunod para maging madali.S
+Tandaan: Kung gagamit ka ng code sa itaas para pumasa ng mga parametro, bigyang pansin ang nasa taas ng stack na naaayon sa unang parametro, pwede ring ipasa ang mga parametro gamit ang sumusunod na code para maging madali.S
 
 ```c#
 using (ScriptBuilder sb = new ScriptBuilder())
@@ -105,4 +105,4 @@ Kung ang isinasauli na halaga ng smart na kontrata ay hindi int, pero ito ay boo
 
 Ang dokumento ay kasalukuyang ini-edit at magiging kompleto ito sa madaling panahon. Pwede mong tingnan ang ibang dokumento sa [Github wiki](https://github.com/neo-project/neo/wiki) o pumunta sa aming [opisyal na NEO website](http://www.neo.org) at tumingin dito.
 
-Ang NEO ay isang community open source na proyekto, kung ikaw ay interesado, pwede kang tumulong sa ibang mga developer na dokumento sa pamamagitan ng paglikha ng mga Pull requests sa GitHub, ang dokumento para sa proyekto ay makikita sa [github.com/neo-project/docs](https://github.com/neo-project/docs), salamat sa iyong pagtulong.
+Ang NEO ay isang community open source na proyekto, kung ikaw ay interesado, pwede kang tumulong sa ibang mga developer na dokumento sa pamamagitan ng paglikha ng mga Pull requests sa GitHub, ang mga dokumento para sa proyekto ay makikita sa [github.com/neo-project/docs](https://github.com/neo-project/docs), salamat sa iyong kontribusyon.

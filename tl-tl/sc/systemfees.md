@@ -2,13 +2,13 @@
 
 ## Mga bayad sa transaksyon
 
-Kasalukuyang walang bayad ang mga transaksyon. Ang gumagmit, gayunpaman, ay maaring pumiling bumayad para sa prayoridad.
+Kasalukuyang walang bayad ang mga transaksyon. Ang gumagamit gayunpaman ay maaring pumiling bumayad para sa prayoridad.
 
 ## Mga Bayad sa Smart na Kontrata
 
 Ang istraktura ng bayad para sa mga Smart na Kontrata ay makikita sa mga talahanayan sa ibaba.
 
-Ang inisyal na 10 GAS sa panahon ng bawat isang eksekusyon ng bawat isang smart na kontrata palaging libre, kabilang ang pag-deploy at pag-invoke. Yan ay, kung ang bayad ay naghahalaga ng 10 GAS o mas mababa pa ay hindi kinakailangang bumayad sa serbisyo.
+Ang inisyal na 10 GAS sa panahon ng bawat isang eksekusyon ng bawat isang smart na kontrata ay palaging libre, kabilang ang pag-deploy at pag-invoke. Yan ay, kung ang bayad ay naghahalaga ng 10 GAS o mas mababa pa ay hindi kinakailangang bumayad sa serbisyo.
 
 Ang bayad sa ibaba ay ang pinakamaliit na bayad. Ang gumagamit ay maaring pumili na bumayad ng ekstra para sa prayoridad.
 
