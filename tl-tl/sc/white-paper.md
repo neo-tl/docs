@@ -93,7 +93,7 @@ Ang coupling ay isang sukatan ng dependensya sa pagitan ng dalawa o maraming mga
 
 ### 3.1 Beripikasyon ng Kontrata
 
-Hindi tulad ng public-key account na sistema na ginamit sa Bitcoin, ang account na sistema ng NEO ay gumagamit ng kontratang account na sistema. Ang bawat account sa NEO ay tumutugon sa isang beripikasyong kontrata, at ang hash na halaga ng beripikasyong kontrata, ay ang account address; Ang program na lohika ng beripikasyong kontrata ay kumukontrol sa pagmamay-ari ng account. Kapag naglilipat mula sa isang account, una mong kakailanganing magpatupad ng beripikasyong kontrata para sa account na iyon. Ang balidasyong kontrata ay maaaring tumanggap ng isang hanay ng mga parameter (kadalasan ang isang digital signature o ibang pamantayan), at nagsasauli ng isang boolean na halaga pagkatapos ng beripikasyon, nagpapahiwatig sa tagumpay ng beripikasyon sa sistema.
+Hindi tulad ng public-key account na sistema na ginamit sa Bitcoin, ang account na sistema ng NEO ay gumagamit ng kontratang account na sistema. Ang bawat account sa NEO ay tumutugon sa isang beripikasyong kontrata, at ang hash na halaga ng beripikasyong kontrata, ay ang account address; Ang program na lohika ng beripikasyong kontrata ay kumukontrol sa pagmamay-ari ng account. Kapag naglilipat mula sa isang account, una mong kakailanganing magpatupad ng beripikasyong kontrata para sa account na iyon. Ang balidasyong kontrata ay maaaring tumanggap ng isang hanay ng mga parametro (kadalasan ang isang digital signature o ibang pamantayan), at nagsasauli ng isang boolean na halaga pagkatapos ng beripikasyon, nagpapahiwatig sa tagumpay ng beripikasyon sa sistema.
 
 Ang user ay maaari munang mag-deploy ng beripikasyong kontrata sa blockchain, o mag-publish ng kontratang nilalaman nang direkta sa transaksyon habang nasa paglipat na proseso.
 
@@ -125,7 +125,7 @@ Ang NeoVM ay nagbibigay ng isang birtwal na hardware layer, upang sumuporta ng m
 
  * **Calculate Stack**
 
-   Ang lahat ng run-time na datos ng NeoVM ay naka-imbak sa kalkulasyon na stack, kapag pagkatapos ng implementasyon ng magkaibang mga instruksyon, ang stack ay ikakalkula sa nararapat na mga elemento ng datos sa operasyon. Halimbawa, kapag ang karagdagang mga instruksyon ay naipatupad, ang dalawang mga operasyon na lumalahok sa pagdaragdag ay papaalisin mula sa kalkulasyon na stack, at ang resulta ng pagdaragdag ay itutulak sa itaas ng stack. Ang mga parameter sa pagtawag ng punsyon ay dapat ding makalkula mula sa kanan patungo sa kaliwa, ayon sa pakakaayos ng stack. Pagkatapos ng matagumpay na pagpatupad ng punsyon, ang nasa itaas ng stack fetch-function ay magsasauli ng halaga.
+   Ang lahat ng run-time na datos ng NeoVM ay naka-imbak sa kalkulasyon na stack, kung kailan matatapos ang implementasyon ng magkaibang mga instruksyon, ang stack ay ikakalkula sa nararapat na mga elemento na datos sa operasyon. Halimbawa, kapag ang karagdagang mga instruksyon ay naipatupad, ang dalawang mga operasyon na lumalahok sa pagdaragdag ay papaalisin mula sa kalkulasyon na stack, at ang resulta ng pagdaragdag ay itutulak sa itaas ng stack. Ang mga parametro sa pagtawag ng punsyon ay dapat ding makalkula mula sa kanan patungo sa kaliwa, ayon sa pakakaayos ng stack. Pagkatapos ng matagumpay na pagpatupad ng punsyon, ang nasa itaas ng stack fetch-function ay magsasauli ng halaga.
 
  * **Spare Stack**
 
@@ -134,7 +134,7 @@ Ang NeoVM ay nagbibigay ng isang birtwal na hardware layer, upang sumuporta ng m
 ### 4.2 Pangkat ng instruksyon 
 
 Ang NeoVM ay nagbibigay ng isang pangkat ng simple, at praktikal na mga instruksyon para sa pagbubuo ng matalinong kontratang mga program.
-Ayon sa mga punsyon, ang pangunahing mga kategorya ay ang susunod:
+Ayon sa mga punsyon, ang pangunahing mga kategorya ay ang mga sumusunod:
 
  * Constant na instruksyon
  * Prosesong kontrol na instruksyon
