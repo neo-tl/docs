@@ -2,7 +2,7 @@
 
 ## 1. Paunang Salita
 
-Ang smart na mga kontrata ay sumasangguni sa anumang kompyuter na program na maaaring awtomatikong magsagawa ng mga termino sa kontrata na naka-preprogram nito. Ang ideya ng smart kontrata ay unang iminungkahi ng kriptograper na si Nick Szabo noong 1994, ginagawa itong kasing luma sa Internet. Dahil sa kakulangan ng isang maaasahang environment ng pagpapatupad, ang smart na mga kontrata ay hindi malawakang nagamit. 
+Ang mga smart na kontrata ay sumasangguni sa anumang kompyuter na program na maaaring awtomatikong magsagawa ng mga termino sa kontrata na naka-preprogram nito. Ang ideya ng smart na kontrata ay unang iminungkahi ng kriptograper na si Nick Szabo noong 1994, ginagawa itong kasing luma sa Internet. Dahil sa kakulangan ng isang maaasahang environment ng pagpapatupad, ang mga smart na kontrata ay hindi malawakang nagamit. 
 
 Sa 2008, isang tao na nasa ilalim ng pangalan na Satoshi Nakamoto ay naglabas ng Bitcoin, at bumalangkas sa pampundasyon na mga konsepto ng isang blockchain. Sa loob ng Bitcoin na blockchain, si Nakamoto ay gumagamit ng isang hanay ng mga scripting language upang tulungan ang mga gumagamit na makamit ang mas kakayahang umangkop sa pagkontrol ng kanilang personal na mga account at mag padala ng proseso, na sa kalaunan ay naging embryonic na porma ng isang nakabase sa chain, ang smart na kontrata na sistema.
 
@@ -18,7 +18,7 @@ Ang artikulong ito ay magpapakilala sa mga tampok ng NeoContract at magsisiyasat
 
 Kung ang isang program ay tumatakbo sa magkaibang mga kompyuter, o sa magkaibang panahon sa parehong kompyuter, ang pagkilos ng program ay matutukoy kung ang parehong input ay garantisadong makakagawa ng parehong output, at kabaligtaran.
 
-Ang Blockchain ay isang multi-party na imbakan, at kalkulasyon na pamamaraan, kung saan ang datos sa loob nitong ipinamamahaging sistema ay ang resulta ng maasahang mga kalkulasyon, at hindi maaaring mabago. Ang smart na mga kontrata ay gumagana sa loob ng multi-node, ang ipinamamahaging blockchain na network. Kung ang isang smart na kontrata ay non-deterministic, ang mga resulta ng magkaibang mga node ay maaaring hindi pantay-pantay. Bilang resulta, ang pagkasunduan sa pagitan ng mga node ay hindi maaaring maabot, at ang network ay magiging hindi umuunlad. Samakatuwid, sa disenyo ng isang smart na kontrata na sistema, mayroong isang pangangailangan na mag-alis ng anumang mga kadahilanan na maaaring magsanhi ng non-deterministic na pagkilos.
+Ang Blockchain ay isang multi-party na imbakan, at kalkulasyon na pamamaraan, kung saan ang datos sa loob nitong ipinamamahaging sistema ay ang resulta ng maasahang mga kalkulasyon, at hindi maaaring mabago. Ang mga smart na kontrata ay gumagana sa loob ng multi-node, ang ipinamamahaging blockchain na network. Kung ang isang smart na kontrata ay non-deterministic, ang mga resulta ng magkaibang mga node ay maaaring hindi pantay-pantay. Bilang resulta, ang pagkasunduan sa pagitan ng mga node ay hindi maaaring maabot, at ang network ay magiging hindi umuunlad. Samakatuwid, sa disenyo ng isang smart na kontrata na sistema, mayroong isang pangangailangan na mag-alis ng anumang mga kadahilanan na maaaring magsanhi ng non-deterministic na pagkilos.
 
 #### 2.1.1 Oras
 
@@ -38,22 +38,22 @@ Mayroong dalawang paraan upang makabuo ng isang sapalarang numero sa NEO:
 
 Kung ang isang program ay nakakuha ng datos sa run-time, ito ay maaaring maging isang non-deterministic na program kung ang data source ay nagbibigay ng non-deterministic na datos. Halimbawa, ang paggamit ng magkaibang mga search engine upang makakuha ng nangungunang 10 na mga resulta sa paghanap para sa isang partikular na keywork, ay maaaring mag-ani ng magkaibang mga resulta, sa iba't ibang paraan ng pagkakaayos, kung magkaibang mga IP address ang ginamit.
 
-Para sa smart na mga kontrata, ang NEO ay nagbibigay ng dalawang mga uri ng natutukoy na mga data source:
+Para sa mga smart na kontrata, ang NEO ay nagbibigay ng dalawang mga uri ng natutukoy na mga data source:
 
 1. **Blockchain na Ledger**
 	
-   Ang kontrata na pamamaraan ay maaaring mag-access sa lahat ng datos sa buong chain gamit ang interoperable na mga serbisyo, kabilang ang kumpletong mga bloke at mga transaksyon, at para sa bawat patlang nila. Ang datos sa mga bloke ay natutukoy at hindi nagbabago, kaya maaari silang ligtas na ma-access gamit ang smart na mga kontrata.
+   Ang kontrata na pamamaraan ay maaaring mag-access sa lahat ng datos sa buong chain gamit ang interoperable na mga serbisyo, kabilang ang kumpletong mga bloke at mga transaksyon, at para sa bawat patlang nila. Ang datos sa mga bloke ay natutukoy at hindi nagbabago, kaya maaari silang ligtas na ma-access gamit ang mga smart na kontrata.
 
 2. **Ispasyo Na Imbakan ng Kontrata**
 
    Bawat kontratang nai-deploy sa NEO na network, ay mayroong isang pribadong ispasiyo na imbakan na maaari lamang ma-access gamit ang kontrata. Ang mekanismo sa pagkakasundo ng NEO ay sumisigurado sa hindi pagbabago ng estado ng imbakan, sa bawat node sa network.
 
 Para sa mga sitwasyon kung saan ang pag-access sa hindi blockchain na datos ay kinakailangan, ang NEO ay hindi nagbibigay ng isang direktang paraan upang makipag-ugnayan sa mga datos na ito.
-Ang hindi blockchain na datos ay kailangang ilipat sa NEO na blockchain gamit ang mga transaksyon, at pagkatapos ay isinalin sa alinmang nabanggit na mga data source, upang ma-access gamit ang smart na mga kontrata. 
+Ang hindi blockchain na datos ay kailangang ilipat sa NEO na blockchain gamit ang mga transaksyon, at pagkatapos ay isinalin sa alinmang nabanggit na mga data source, upang ma-access gamit ang mga smart na kontrata. 
 
 #### 2.1.4 Kontrata na Pagtawag
 
-Ang smart na mga kontrata sa NeoContract ay maaaring tumawag sa isa't isa, ngunit hindi dapat tawaging naka-recursive. Ang recursion ay maaaring makamit sa loob ng kontrata, ngunit hindi kayang tumawid sa mga hangganan ng kasalukuyang kontrata. Sa karagdagan, ang relasyon ng pagtawag sa pagitan ng mga kontrata ay dapat naka-static: Ang target ay hindi dapat tukuyin sa runtime. Ito ay nagpapahintulot ng pagkilos ng program upang maging buong determinado bago ang pagpapatupad, at ang relasyon ng pagtawag nito upang maging buong matukoy bago ito maaaring patakbuhin. Batay nito, ang maramihang mga kontrata ay maaaring dynamic na ma-partition upang makamit ang nakahilerang pagpapatupad.
+Ang mga smart na kontrata sa NeoContract ay maaaring tumawag sa isa't isa, ngunit hindi dapat tawaging naka-recursive. Ang recursion ay maaaring makamit sa loob ng kontrata, ngunit hindi kayang tumawid sa mga hangganan ng kasalukuyang kontrata. Sa karagdagan, ang relasyon ng pagtawag sa pagitan ng mga kontrata ay dapat naka-static: Ang target ay hindi dapat tukuyin sa runtime. Ito ay nagpapahintulot ng pagkilos ng program upang maging buong determinado bago ang pagpapatupad, at ang relasyon ng pagtawag nito upang maging buong matukoy bago ito maaaring patakbuhin. Batay nito, ang maramihang mga kontrata ay maaaring dynamic na ma-partition upang makamit ang nakahilerang pagpapatupad.
 
 ### 2.2 Mataas na Pagganap
 
