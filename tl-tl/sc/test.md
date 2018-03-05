@@ -1,10 +1,10 @@
-# Smart contract unit test
+# Unit test sa mga smart na kontrata
 
-After reading the previous document, we have been able to use C# in Visual Studio 2015 to prepare a smart contract. How can we do unit tests after writing a smart contract?
+Pagkatapos basahin ang nakaraang dokumento, tayo ay nagawang gumamit ng C# sa Visual Studio 2015 para maghanda ng mga smart na kontrata. Paano tayo gumawa ng mga unit test pagkatapos magsulat ng isang smart na kontrata?
 
-## Write unit tests
+## Sumulat ng mga unit test
 
-For example, you create the following smart contract, which contains three parameters, the return value is int.
+Halimbawa, pwede kang gumawa ng sumusunod na smart na kontrata, kung saan mayroong tatlong mga parametro, ang isinasauli na halaga ay int.
 
 
 ```c#
@@ -31,14 +31,14 @@ namespace Neo.SmartContract
 }
 ```
 
-After compiling, generate the contract's `Test1.avm` file. We can create a unit test project and test `Test1.avm`.
+Pagkatapos mag-compile, buohin ang `Test1.avm` file ng kontrata. Pwede tayong gumawa ng isang unit test na proyekto at i-test ang `Test1.avm`.
 
-First create a C# Console App (.Net Framework) project with Visual Studio, with .NET Framework 4.6.2 or later. Then add a reference to `Neo.dll` and `neon.dll`.
+Una, gumawa ng isang C# Console App (.Net Framework) na proyekto gamit ang Visual Studio, gamit ang .NET Framework 4.6.2 o mas higit pa. Pagkatapos, dumagdag ng isang reference sa `Neo.dll` at `neon.dll`.
 
-> [!Note]
-> These two files can be obtained by compiling [Neo](https://github.com/neo-project/neo) and [neo-vm](https://github.com/neo-project/neo-vm).
+> [!Tandaan]
+> Ang dalawang mga file ay maaring makuha sa pamamagitan ng pag-compile sa [Neo](https://github.com/neo-project/neo) at [neo-vm](https://github.com/neo-project/neo-vm).
 
-> Alternatively, you can just add NuGet packages "NEO" and "Neo.VM" to your project. You can do that by right-clicking the contract project on the Solution Explorer, go to Browse, search NEO and install the required packages.
+> Bilang alternatibo, pwede mo lang idagdag ang "NEO" at "Neo.VM" na mga NuGet na package sa iyong proyekto. Pwede mong gawin ito sa pamamagitan ng pag-right-click ng contract project sa Solution Explorer, pumunta sa Browse, at hanapin ang NEO at i-install ang mga kinakailangang mga package.
 
 ```c#
 using System;
@@ -59,15 +59,15 @@ namespace ConsoleApplication1
 
             using (ScriptBuilder sb = new ScriptBuilder())
             {
-                sb.EmitPush(2); // corresponds to the parameter c
-                sb.EmitPush(4); // corresponds to the parameter b
-                sb.EmitPush(3); // corresponds to the parameter a
+                sb.EmitPush(2); // tumutugma sa c na parametero
+                sb.EmitPush(4); // tumutugma sa b na parametero
+                sb.EmitPush(3); // tumutugma sa a na parametero
                 engine.LoadScript(sb.ToArray());
             }
 
-            engine.Execute(); // start execution
+            engine.Execute(); // simulang ang eksekyusyon
 
-            var result = engine.EvaluationStack.Peek().GetBigInteger(); // set the return value here
+            var result = engine.EvaluationStack.Peek().GetBigInteger(); // dito itakda ang isasauling halaga
             Console.WriteLine($"Execution result {result}");
             Console.ReadLine();
         }
@@ -75,17 +75,17 @@ namespace ConsoleApplication1
 }
 ```
 
-Compile output: Execution result 14, as expected
+Output sa pag-compile: Resulta ng eksekyusyon ay 14, tulad ng inaasahan
 
-> [!Note]
+> [!Tandaan]
 >
-> If you encounter the following error after execution：
+> Kung matatagpo ang sumusunod na error pagkatapos mag-eksekyut:
 >
-> The type “BigInteger” is defined in an unreferenced assembly. You must add a reference to the assembly “System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”
+> Ang tipo na “BigInteger” ay i-denifine sa isang unreferenced na assembly. Kinakailangan mong magdagdag ng reference sa assembly na “System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”
 >
-> You can add a reference to “System.Numerics”  to solve the problem。
+> Pwede kang magdagdag ng isang reference sa “System.Numerics” para maresolba ang problema。
 
-Note: If you use the above code to pass the parameters, pay attention to the top of the stack corresponding to the first parameter, for convenience you can also pass the parameters with following code.S
+Tandaan: Kung gagamit ka ng code sa itaas para pumasa ng mga parametero, bigyang pansin ang nasa taas ng stack na naaayon sa unang parametro, pwede ring ipasa ang mga parametro gamit ang sumusunod para maging madali.S
 
 ```c#
 using (ScriptBuilder sb = new ScriptBuilder())
@@ -95,14 +95,14 @@ using (ScriptBuilder sb = new ScriptBuilder())
     engine.LoadScript(sb.ToArray());
 }
 ```
-If the return value of the smart contract is not of type int, but is bool or other type, you need to set `engine.EvaluationStack.Peek (). GetBigInteger ()` to other values, as shown in Figure
+Kung ang isinasauli na halaga ng smart na kontrata ay hindi int, pero ito ay bool o ibang tipo, kinakailangan mong i-set ang `engine.EvaluationStack.Peek (). GetBigInteger ()` sa ibang halaga, kagaya ng pinapakita sa Figure
 
 [](/assets/test_1.jpg)
 
 ------
 
-### 📖 The document is being edited
+### 📖 Ang dokumento ay kasalukuyang ini-edit
 
-The document is being edited and we will complete it as soon as possible. You can view other documents on [Github wiki](https://github.com/neo-project/neo/wiki) or come to our [NEO official website](http://www.neo.org) and look around.
+Ang dokumento ay kasalukuyang ini-edit at magiging kompleto ito sa madaling panahon. Pwede mong tingnan ang ibang dokumento sa [Github wiki](https://github.com/neo-project/neo/wiki) o pumunta sa aming [opisyal na NEO website](http://www.neo.org) at tumingin dito.
 
-NEO is a community open source project, if you are interested, you can also contribute to the developer documents by creating Pull requests on GitHub, the documents for the project can be found at [github.com/neo-project/docs](https://github.com/neo-project/docs), thank you for your contribution.
+Ang NEO ay isang community open source na proyekto, kung ikaw ay interesado, pwede kang tumulong sa ibang mga developer na dokumento sa pamamagitan ng paglikha ng mga Pull requests sa GitHub, ang dokumento para sa proyekto ay makikita sa [github.com/neo-project/docs](https://github.com/neo-project/docs), salamat sa iyong pagtulong.

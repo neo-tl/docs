@@ -1,20 +1,20 @@
-# System Fees
+# Mga Bayad sa Sistema
 
-## Transaction fees
+## Mga bayad sa transaksyon
 
-There are currently no transaction fees. The user can however choose to pay transaction fee for priority.
+Kasalukuyang walang bayad ang mga transaksyon. Ang gumagmit, gayunpaman, ay maaring pumiling bumayad para sa prayoridad.
 
-## Smart Contract Fees
+## Mga Bayad sa Smart na Kontrata
 
-The fee structure for Smart Contracts can be found in the tables below.
+Ang istraktura ng bayad para sa mga Smart na Kontrata ay makikita sa mga talahanayan sa ibaba.
 
-The initial 10 GAS during each execution of every smart contract is always free, including smart contract deployment and invoking. That is, fees that sum up to 10 GAS or less will not require a service fee.
+Ang inisyal na 10 GAS sa panahon ng bawat isang eksekusyon ng bawat isang smart na kontrata palaging libre, kabilang ang pag-deploy at pag-invoke. Yan ay, kung ang bayad ay naghahalaga ng 10 GAS o mas mababa pa ay hindi kinakailangang bumayad sa serbisyo.
 
-The fees below are minimum fees. The user can choose to pay extra for priority.
+Ang bayad sa ibaba ay ang pinakamaliit na bayad. Ang gumagamit ay maaring pumili na bumayad ng ekstra para sa prayoridad.
 
-All Smart Contract fees are considered as Service fee to be put in a pool for re-distribution to all NEO holders. The distribution is proportional to amount of NEO.
+Ang lahat ng bayad para sa mga Smart na Kontrata ay kinokonsiderang Service fee na ilalagay sa isang pool para ipamahagi uli sa lahat ng may hawak ng NEO. Ang pamamahagi ay proporsyonal sa dami ng NEO.
 
-### Fees for System Calls
+### Mga Bayad para sa Mga Pagtawag sa Sistema
 
 | SysCall                               | Fee [Gas] |
 | ------------------------------------- | :-------: |
@@ -38,9 +38,9 @@ All Smart Contract fees are considered as Service fee to be put in a pool for re
 | Storage.Delete                        |    0.1    |
 | (Default)                             |   0.001   |
 
-* Additional to 1 GAS minimum
+* Karagdagan sa 1 GAS na minimum
 
-### Fees for Instructions
+### Bayad para sa mga Instruksyon
 
 | Instruction                          | Fee [Gas] |
 | ------------------------------------ | :-------: |
