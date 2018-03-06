@@ -1,4 +1,4 @@
-# NeoContract na White Paper
+# White Paper ng NeoContract
 
 ## 1. Paunang Salita
 
