@@ -1,38 +1,38 @@
-# White Paper ng NEO
+# NEO White Paper
 
-Isang ibinahaging network para sa Matalinong Ekonomiya
+A distributed network for the Smart Economy
 
-## Mga layunin ng disenyo ng NEO: Matalinong Ekonomiya
+## NEO design goals: Smart Economy
 
-Ang NEO ay ang paggamit ng blockchain na teknolohiya at digital na pagkakakilanlan sa mga digitize asset, ang paggamit ng mga matalinong kontrata para sa mga digital asset upang maging sariling-namamahala, upang makamit ang "matalinong ekonomiya" na may isang ibinahaging network.
+NEO is the use of blockchain technology and digital identity to digitize assets, the use of smart contracts for digital assets to be self-managed, to achieve "smart economy" with a distributed network.
 
-### Mga Digital Asset
+### Digital Assets
 
-Ang mga digital asset ay napo-program na mga asset na umiiral sa porma ng elektronik na datos. Gamit ang blockchain na teknolohiya, ang digitization ng mga asset ay maaaring desentralisado, mapagkakatiwalaan, maaaring bakasin, napakadaling maunawaan, at libre sa mga intermediary. Sa blockchain ng NEO, ang mga gumagamit ay maaaring magparehistro, kumalakal, at magpalipat-lipat ng maramihang uri ng mga asset. Pinapatunayan ang koneksyon sa pagitan ng digital at pisikal na mga asset ay posible gamit ang digital na pagkakakilanlan. Ang mga asset na narehistro gamit ang isang napatunayang digital na pagkakakilanlan ay protektado ng batas.
+Digital assets are programmable assets that exist in the form of electronic data. With blockchain technology, the digitization of assets can be decentralized, trustful, traceable, highly transparent, and free of intermediaries. On the NEO blockchain, users are able to register, trade, and circulate multiple types of assets. Proving the connection between digital and physical assets is possible through digital identity. Assets registered through a validated digital identity are protected by law.
 
-Ang NEO ay may dalawang porma ng mga digital asset: ang mga global asset at mga kontratang asset. Ang mga global asset ay maaaring irekord sa espasyo ng sistema at maaaring kilalanin ng lahat ng mga matalinong kontrata at mga kliyente. Ang mga kontratang asset ay narerekord sa pribadong storage area ng matalinong kontrata at nangangailangan ng isang tumutugmang kliyente upang makilala ang mga ito. Ang mga kontratang asset ay maaaring sumunod sa tiyak na mga standard upang makamit ang pagkakaalinsunod sa karamihang mga kliyente.
+NEO has two forms of digital assets: global assets and contract assets. Global assets can be recorded in the system space and can be identified by all smart contracts and clients. Contract assets are recorded in the private storage area of the smart contract and require a compatible client to recognize them. Contract assets can adhere to certain standards in order to achieve compatibility with most clients.
 
-### Digital na Pagkakakilanlan
+### Digital Identity
 
-Ang digital na pagkakakilanlan ay tumutukoy sa impormasyon ng pagkakakilanlan ng mga indibidwal, mga organisasyon, at iba pang mga katauhan na umiiral sa elektronik na porma. Ang mas gulang na sistema ng digital na pagkakakilanlan ay nakabatay sa PKI (Public Key Infrastructure) X.509 na standard. Sa NEO, magpapatupad kami ng isang pangkat ng X.509 na mga standard ng compatible digital na pagkakakilanlan. Ang pangkat ng mga standard ng digital na pagkakakilanlan na ito, karagdag sa compatible X.509 level certificate issuance na modelo, ay susuporta rin sa Web Of Trust point-to-point certificate issuance na modelo. Ang aming pagpapatunay ng pagkakakilanlan kapag nag-iisyu o gumagamit ng mga digital na pagkakakilanlan ay nagsasama ng paggamit ng facial na mga tampok, fingerprint, boses, SMS at iba pang multi-factor na mga paraan ng pagpapatunay. Sa parehong panahon, gagamit din kami ng blockchain upang palitan ang Online Certificate Status Protocol (OCSP) upang pamahalaan at irekord ang X.509 Certificate Revocation List (CRL).
+Digital identity refers to the identity information of individuals, organizations, and other entities that exist in electronic form. The more mature digital identity system is based on the PKI (Public Key Infrastructure) X.509 standard. In NEO, we will implement a set of X.509 compatible digital identity standards. This set of digital identity standards, in addition to compatible X.509 level certificate issuance model, will also support Web Of Trust point-to-point certificate issuance model. Our verification of identity when issuing or using digital identities includes the use of facial features, fingerprint, voice, SMS and other multi-factor authentication methods. At the same time, we will also use the blockchain to replace the Online Certificate Status Protocol (OCSP) to manage and record the X.509 Certificate Revocation List (CRL).
 
-### Matalinong Kontrata
+### Smart Contract
 
-Ang matalinong kontrata ay unang iminungkahi ng kriptograper na si Nick Szabo noong 1994, limang taon lamang pagkatapos sa paglikha ng World Wide Web. Ayon sa depinisyon ni Szabo: Kapag ang isang naka-pre-program na kondisyon ay na-trigger, ang matalinong kontrata ay magsasagawa ng nararapat na mga kontratang termino. Ang teknolohiya ng blockchain ay nagbibigay sa atin ng isang desentralisado, tamper-resistant, napakamaaasahang sistema kung saan ang mga matalinong kontrata ay sobrang kapaki-pakinabang. Ang NEO ay may isang independienteng sistema ng matalinong kontrata: ang NeoContract.
+The smart contract was first proposed by the cryptographer Nick Szabo in 1994, only five years after the creation of the World Wide Web. According to Szabo's definition: When a pre-programmed condition is triggered, the smart contract will execute the corresponding contract terms. Blockchain technology provides us with a decentralized, tamper-resistant, highly reliable system in which smart contracts are very useful. NEO has an independent smart contract system: NeoContract.
 
-Ang NeoContract na sistema ng matalinong kontrata ay ang pinakamalaking tampok sa payapang integrasyon ng umiiral na developer ecosystem. Ang mga developer ay hindi na kailangang mag-aral ng isang bagong programming na lengguwahe ngunit gagamit lamang ng C#, Java at ibang pangunahing mga programming na lengguwahe sa kanilang pamilyar na mga IDE environment (Visual Studio, Eclipse, etc.) para sa pag-develop ng matalinong kontrata, pag-debug at pagkompayl. Ang Universal Lightweight Virtual Machine ng NEO, ang NeoVM, ay may mga kalamangan sa mataas na katiyakan, mataas na kasunduan, at mataas na scalability. Ang NeoContract na sistema ng matalinong kontrata ay pinapahintulutan ang milyun-milyong mga developer sa buong mundo na madaliang magpatupad sa pag-develop sa mga matalinong kontrata. Ang NeoContract ay may hiwalay na white paper na naglalarawan sa mga detalye ng implementasyon.
+The NeoContract smart contract system is the biggest feature of the seamless integration of the existing developer ecosystem. Developers do not need to learn a new programming language but use C#, Java and other mainstream programming languages in their familiar IDE environments (Visual Studio, Eclipse, etc.) for smart contract development, debugging and compilation. NEO's Universal Lightweight Virtual Machine, NeoVM, has the advantages of high certainty, high concurrency, and high scalability. The NeoContract smart contract system will allow millions of developers around the world to quickly carry out the development of smart contracts. NeoContract will have a separate white paper describing the implementation details.
 
-### Aplikasyon and Ecosystem
+### Application and Ecosystem
 
-Ang ecosystem ay ang sigla ng open source na komunidad. Upang makamit ang layunin sa isang matalinong ekonomikong network, ang NEO ay itutuon sa pag-develop sa sarili nitong ecosystem, nagbibigay ng gulang na mga development na kasangkapan, pinapabuti ang pagpapaunlad ng mga dokumento, inaayos ang edukasyon at pagsasanay na mga aktibidad, at nagbibigay ng pinansyal na suporta. Plano naming sumuporta sa sumusunod na mga nakabase sa NEO na aplikasyon at ekolohiya at upang gantimpalaan ang mga pagpapabuti sa disenyo ng karanasan:
+Ecosystem is the vitality of the open source community. In order to achieve the goal of an intelligent economic network, NEO will be committed to the development of its ecosystem, providing mature development tools, improving development of documents, organizing education and training activities, and providing financial support. We plan to support the following NEO-based applications and ecology and to reward improvements to the design of the experience:
 
 🔹 **Node Program**
 
-- Isang buong gumaganang Full node PC na program
+- A fully functioning Full node PC program
 
-- Isang magaang node PC na program na may mas mabuting user experience
+- A light node PC program with a better user experience
 
-- Web / Android / iOS na mga kliyente na hindi na kailangang mag-synchronize sa blockchain
+- Web / Android / iOS clients that do not need to synchronize with the blockchain
 
 - Hardware wallet
 
@@ -40,9 +40,9 @@ Ang ecosystem ay ang sigla ng open source na komunidad. Upang makamit ang layuni
 
 🔹 **SDK Development Kit**
 
-- Suporta ng Java / Kotlin, .NET C # / VB, JavaScript / Typescript, Python, Go
+- Support Java / Kotlin, .NET C # / VB, JavaScript / Typescript, Python, Go
 
-🔹 **Compiler ng Matalinong Kontrata and IDE Plugin**
+🔹 **Smart Contract Compiler and IDE Plugin**
 
 - C# / VB.Net / F#, Visual Studio
 
@@ -54,132 +54,132 @@ Ang ecosystem ay ang sigla ng open source na komunidad. Upang makamit ang layuni
 
 - Python / Ruby
 
-🔹 **Mga Desentralisadong Aplikasyon**
+🔹 **Decentralized Applications**
 
-- Matalinong pondo
+- Smart fund
 
-- AI-assisted na legal na matalinong kontrata
+- AI-assisted legal smart contract
 
 - Social networking
 
-- Automated tokens liquidity na mga provider
+- Automated tokens liquidity providers
 
-- Desentralisadong pagpapalitan
+- Decentralized exchange
 
-- Matatag na komunikasyong protokol
+- Secure communication protocol
 
-- Data exchange na merkado
+- Data exchange market
 
-- Intellectual property trading na merkado
+- Intellectual property trading market
 
-- Prediction na merkado
+- Prediction market
 
-- Advertising na merkado
+- Advertising market
 
-- Hashpower na merkado
+- Hashpower market
 
-- NeoGas na merkado
+- NeoGas market
 
-## Modelo ng Pamamahala ng NEO
+## NEO Management Model
 
-### Ekonomikong Modelo
+### Economic Model
 
-Ang NEO ay may dalawang likas na mga token, ang NEO (abbreviated na simbolong NEO) at NeoGas (abbreviated na simbolong GAS).
+NEO has two native tokens, NEO (abbreviated symbol NEO) and NeoGas (abbreviated symbol GAS).
 
-Ang NEO, na may kabuuang 100 milyong token, ay kumukatawan sa karapatang mamahala ng network. Ang pamamahala ng mga karapatan ay nagsasama ng pagboto para sa bookkeeping, mga pagbabago sa NEO network na parametro, at iba pa. Ang pinakamababang yunit ng NEO ay 1 at ang mga token ay hindi maaaring mahati.
+NEO, with a total of 100 million tokens, represents the right to manage the network. Management rights include voting for bookkeeping, NEO network parameter changes, and so on. The minimum unit of NEO is 1 and tokens cannot be subdivided.
 
-Ang GAS ay ang gasolinang token para sa pagsasakatuparan ng NEO network resource na kontrol, na may pinakamataas na kabuuang limit ng 100 milyon. Ang NEO network na mga singil para sa operasyon at pag-iimbak ng mga token at mga matalinong kontrata, sa gayon lumilikha ng ekonomikong mga insentibo para sa mga bookkeeper at maiwasan ang pag-abuso sa mga resource. Ang pinakamaliit na yunit ng GAS ay 0.00000001.
+GAS is the fuel token for the realization of NEO network resource control, with a maximum total limit of 100 million. The NEO network charges for the operation and storage of tokens and smart contracts, thereby creating economic incentives for bookkeepers and preventing the abuse of resources. The minimum unit of GAS is 0.00000001.
 
-Sa genesis na bloke sa NEO network, 100 milyong NEO ang nabuo, ang GAS ay hindi pa nabuo. 100 milyong GAS, tumutugon sa 100 milyong NEO, ay nabuo gamit ang isang decay na algoritmo sa loob ng 22 taong panahon upang i-address ang paghawak sa NEO. Kung ang NEO ay napadala sa isang bagong address, ang kasunod na nabuong GAS ay maki-credit sa bagong address.
+In the genesis block of the NEO network, 100 million NEOs are generated, GAS has not yet been generated. 100 million GAS, corresponding to the 100 million NEO, will be generated through a decay algorithm in about 22 years time to address holding NEO. If NEO is transferred to a new address, the subsequent GAS generated will be credited to the new address.
 
-Ang NEO network ay magtatakda ng isang pambungad sa pamamagitan ng pagboto upang palayain ang GAS mula sa isang tiyak na halaga sa panlipat na mga transaksyon at mga operasyon ng matalinong kontrata upang mapabuti ang user experience. Kapag may naganap na isang malaking halaga ng spam na transaksyon, ang NeoID ay maaaring gamitin upang iuuna ang mga transaksyon at mga matalinong kontrata gamit ang mga kwalipikadong pagkakakilanlan. Ang mga transaksyon at mga matalinong kontrata na walang kwalipikadong mga digital na pagkakakilanlan ay maaaring kumuha ng prayoridad sa pamamagitan ng pagbabayad ng GAS.
+The NEO network will set a threshold by voting to exempt GAS from a certain amount of transfer transactions and smart contract operations to enhance the user experience. When a large amount of spam transactions occur, NeoID can be used to prioritize transactions and smart contracts with qualified identities. Transactions and smart contracts with no qualifying digital identities can get priority by paying GAS.
 
-### Mekanismo ng Pagpapamahagi
+### Distribution Mechanism
 
-Distribusyon ng NEO:
+NEO distribution:
 
-Ang 100 milyong token ng NEO ay nakahati sa dalawang bahagi. Ang unang bahagi ay 50 milyong token na proporsyonal na ibinahagi sa mga tagasuporta ng NEO sa panahon ng crowdfunding. Ang bahaging ito ay naibahagi.
+NEO's 100 million tokens is divided into two portions. The first portion is 50 million tokens distributed proportionally to supporters of NEO during the crowdfunding. This portion has been distributed.
 
-Ang pangalawang bahagi ay 50 milyong NEO na pinamahalaan ng Konseho ng NEO upang suportahan ang pang-matagalang pag-develop ng NEO, operasyon at pagpapanatili at ecosystem. Ang NEO sa bahaging ito ay may isang lockout na panahon ng 1 taon at maa-unlock lamang pagkatapos ng October 16, 2017. Ang bahaging ito ay hindi papasok sa mga pagpapalitan at sa pang-matagalang suporta lamang ng NEO na mga proyekto.
+The second portion is 50 million NEO managed by the NEO Council to support NEO's long-term development, operation and maintenance and ecosystem. The NEO in this portion has a lockout period of 1 year and is unlocked only after October 16, 2017. This portion will not enter the exchanges and is only for long-term support of NEO projects. The plans for it are as below:
 
-🔹 10 milyong token (10% sa kabuuan) ang magagamit upang mag-udyok sa mga NEO na developer at mga miyembro ng NEO na Konseho
+🔹 10 million tokens (10% total) will be used to motivate NEO developers and members of the NEO Council
 
-🔹 10 milyong token (10% sa kabuuan) ang magagamit upang mag-udyok sa mga developer sa NEO ecosystem
+🔹 10 million tokens (10% total) will be used to motivate developers in the NEO ecosystem
 
-🔹 15 milyong token (15% sa kabuuan) ay magagamit upang mag-cross-invest sa ibang block-chain na mga proyekto, na pagmamay-ari ng NEO na Konseho at ginagamit lamang para sa NEO na mga proyekto
+🔹 15 million tokens (15% total) will be used to cross-invest in other block-chain projects, which are owned by the NEO Council and are used only for NEO projects
 
-🔹 15 milyon (15% sa kabuuan) ay pananatilihin bilang contigency
+🔹 15 million (15% total) will be retained as contingency
 
-🔹 Ang taunang paggamit ng NEO ayon sa prinsipyo ay hindi dapat lalagpas sa 15 milyong token
+🔹 The annual use of NEO in principle shall not exceed 15 million tokens
 
-Distribusyon ng GAS:
+GAS distribution:
 
-Ang GAS ay nabuo kasama ang bawat bagong bloke. Ang paunang kabuuang halaga ng GAS ay zero. Gamit ang tumataas na singil ng pagbubuo ng bagong bloke, ang kabuuang limit ng 100 milyong GAS ay makakamit sa loob ng 22 taon. Ang agwat sa pagitan ng bawat bloke ay halos 15-20 segundo, at 2 milyong bloke ang nabuo sa loob ng isang taon.
+GAS is generated with each new block. The initial total amount of GAS is zero. With the increasing rate of new block generation, the total limit of 100 million GAS will be achieved in about 22 years. The interval between each block is about 15-20 seconds, and 2 million blocks are generated in about one year.
 
-Sa bawat taon halos 2 milyong bloke ang mabubuo at ang paunang pagbubuo ay nasa 8 GAS bawat bloke. Magkakaroon ng isang taunang pagbabawas ng 1 GAS bawat bloke, bawat taon, upang isabay sa paglipas ng bawat 2 milyong bloke. Ang pagbabawas ay magpapatuloy lamang hanggang sa 1 GAS bawat bloke at panghahawakan ang presyong iyon ng halos 22 taon. Pagkatapos ng ika-44 milyong bloke ang kabuuang GAS na nabuo ay aabot sa 100 milyon ay mula sa puntong ito walang nang higit pang pagbubuo ng GAS mula sa mga bagong bloke.
+Each year around 2 million blocks will be generated and the initial generation will be 8 GAS per block. There will be an annual reduction of 1 GAS per block, per year, to coincide with the passing of every 2 million blocks. The reduction will continue down to just 1 GAS per block and will be held at that rate for around 22 years. After the 44 millionth block the total GAS generated will have reached 100 million and from this point there will be no further generation of GAS from new blocks.
 
-According to this release curve, 16% of the GAS will be created in the first year, 52% of the GAS will be created in the first four years, and 80% of the GAS will be created in the first 12 years. These GAS will be distributed proportionally in accordance with the NEO holding ratio, recorded in the corresponding addresses. NEO holders can initiate a claim transaction at any time and claim these GAS tokens at their holding addresses.
+Ayon sa release curve na ito, 16% sa GAS ay malilikha sa unang taon, 52% sa GAS ay malilikha sa unang apat na taon, at 80% sa GAS ay malilikha sa unang 12 taon. Ang mga GAS na ito ay proporsyonal na ibabahagi na nakaalinsunod sa NEO holding ratio, na itinala sa nararapat na mga address. Ang mga NEO holder ay maaaring simulan ang pang-angkin na transaksyon sa anumang oras at angkinin itong mga GAS token sa kanilang mga holding address.
 
-### Governance mechanism
+### Mekanismo sa pamamahala
 
-Chain governance: NEO token holders are the network owners and managers, managing the network through voting in the network, using the GAS generated from NEO to utilize the functions in the network. NEO tokens can be transferred.
+Chain na pamamahala: Ang mga NEO token holder ay ang mga may-ari at tagapamahala ng network, namamahala ng network sa pamamagitan ng pagboto sa network, gamit ang nabuo ng GAS mula sa NEO upang magamit ang mga punsyon sa network. Ang mga NEO token ay maaaring ilipat.
 
-Off-chain governance: NEO Council consists of the founding members of the NEO project, under which the management committee, technical committee and the secretariat, respectively, are responsible for strategic decision-making, technical decision-making and specific implementation. The NEO Council is responsible to the NEO community for the promotion and development of NEO ecosystem as its primary objective.
+Off-chain na pamamahala: Ang Konseho ng NEO ay binubuo ng mga founding na miyembro ng NEO na proyekto, sa ilalim kung saan ang komite ng pamamahala, teknikal na komite at ang secretariat, ayon sa pagkakabanggit, ay responsable para sa estratehikong paggawa ng desisyon, teknikal na paggawa ng desisyon at tiyak na implementasyon. Ang Konseho ng NEO ay reponsable sa komunidad ng NEO para sa promosyon at kaunlaran ng NEO na ecosystem bilang pangunahing layunin nito.
 
-## NEO technology implementation
+## Implementasyon ng NEO na teknolohiya
 
-### Consensus mechanism: dBFT
+### Consensus na mekanismo: dBFT
 
-The dBFT is called the Delegated Byzantine Fault Tolerant, a Byzantine fault-tolerant consensus mechanism that enables large-scale participation in consensus through proxy voting. The holder of the NEO token can, by voting, pick the bookkeeper it supports. The selected group of bookkeepers, through BFT algorithm, reach a consensus and generate new blocks. Voting in the NEO network continues in real time, rather than in accordance with a fixed term.
+Ang dBFT ay tinatawag ng Delegated Byzantine Fault Tolerant, isang Byzantine fault-tolerant consensus na mekanismo na pinapagana ang malakihang partisipasyon sa pinagkasunduan sa pamamagitan ng proxy na pagboto. Ang holder ng NEO token ay maaaring, sa pamamagitan ng pagboto, pumili ng bookkeeper na sinusuportahan nito. Ang napiling grupo ng mga bookkeeper, gamit ang BFT na algoritmo, ay maabot ang isang pikakasunduan at bubuo ng bagong mga bloke. Ang pagboto sa NEO network ay magpapatuloy sa real time, sa halip na umalinsunod sa isang nakapirming termino.
 
-The dBFT provides fault tolerance of f = ⌊ (n-1) / 3 ⌋ for a consensus system consisting of n consensus nodes. This fault tolerance also includes both security and availability, resistant to general and Byzantine failures, and is suitable for any network environment. dBFT has good finality, meaning that once confirmations are final, the block can not be bifurcated, and the transaction will not be revoked or rolled back.
+Ang dBFT ay magbibigay ng fault tolerance of f = ⌊ (n-1) / 3 ⌋ para sa isang consensus na sistema na binubuo ng n na mga consensus node. Ang fault tolerance na ito ay nagsasama rin ng parehong seguridad at availability, lumalaban sa pangkalahatan at Byzantine na mga kabiguan, at naaangkop sa anumang network environment. Ang dBFT ay may magandang pagtatapos, nangangahulugan na kapag ang mga kumpirmasyon ay huli na, ang bloke ay hindi na maaaring i-bifurcate, at ang transaksyon ay hindi na mababawi o maibabalik.
 
-In the NEO dBFT consensus mechanism, taking about 15 to 20 seconds to generate a block, the transaction throughput is measured up to about 1,000TPS, which is excellent performance among the public chains. Through appropriate optimization, there is potential to reach 10,000TPS, allowing it to support large-scale commercial applications.
+Sa NEO dBFT consensus na mekanismo, na tatagal ng halos 15 hanggang 20 segundo upang bumuo ng isang bloke, ang transaksyon na throughput ay masusukat sa halos 1,000TPS, na isang mahusay na pagganap bukod sa publikong mga chain. Sa pamamagitan ng angkop na optimisasyon, may potensyal na aabot ng 10,000TPS, papayagan itong sumuporta ng malakihang komersyal na mga aplikasyon.
 
-The dBFT combines digital identity technology, meaning the bookkeepers can be a real name of the individual or institution. Thus, it is possible to freeze, revoke, inherit, retrieve, and ownership transfer due to judicial decisons on them. This facilitates the registration of compliant financial assets in the NEO network. The NEO network plans to support such operations when necessary.
+Ang dBFT ay pagsasamahin ang digital identity na teknolohiya, nangangahulugan na ang mga bookkeeper ay maaaring isang tunay na pangalan ng indibidwal o institusyon. Kaya naman, posible itong i-freeze, bawiin, manahin, kunin, at lipatan ng pagmamay-ari dahil sa mga desisyon ng hudisyal sa mga ito. Pinapadali nito ang pagpaparehistro ng mga compliant financial asset sa NEO na network. Ang NEO network ay nagpaplano na sumuporta tulad nitong mga operasyon kapag kinakailangan.
 
-### Smart contract system: NeoContract
+### Sistema ng matalinong kontrata: NeoContract
 
-NEO's smart contract system consists of three parts:
+Ang sistema ng matalinong kontrata ng NEO ay binubuo ng tatlong bahagi:
 
 **NeoVM - Universal Block Chain Virtual Machine:**
 
-NeoVM is a lightweight, general-purpose virtual machine whose architecture is very close to the JVM and .NET Runtime, similar to a virtual CPU that reads and executes instructions in the contract in sequence, performs process control based on the functionality of the instruction operations, logic operations and so on. It has a good start-up speed and versatility, is very suitable for small programs such as smart contracts, can also be ported to non-blockchain systems, or integrated with the IDE to provide an optimal development experience. NeoVM's functionality can be extended, like introducing a JIT (real-time compiler) mechanism, thereby enhancing the efficiency of the implementation.
+Ang NeoVM ay isang magaan, pangkalahatang layunin na birtwal na makina na may arkitektura na napakalapit sa JVM at .NET Runtime, katulad sa isang birtwal na CPU na nagbabasa at nagpapatupad ng mga instruksyon sa kontrata nang magkakasunod, gumaganap ng prosesong kontrol batay sa functionality ng instruksyon na mga operasyon, mga lohikang operasayon at iba pa. Ito ay may isang magandang bilis ng start-up at kagalingan, napakaangkop para sa maliliit na mga programa katulad ng mga matalinong kontrata, maaari ring i-port sa non-blockchain na mga sistema, o i-integrate sa IDE upang magbigay ng isang pinakamainam na karanasan sa pag-develop. Ang functionality ng NeoVM ay maaaring mapalawak, katulad ng pagpapakilala sa isang JIT (real-time na compiler) na mekanismo, sa gayon ay nagpapaunlad ng kahusayan ng implementasyon.
 
-**InteropService - Interoperable Services:**
+**InteropService - Interoperable na mga Serbisyo:**
 
-Used to load the blockchain ledger, digital assets, digital identity, persistent storage area, NeoFS, and other underlying services. They are like virtual machines that are provided for virtual machines, enabling smart contracts to access these services at run time to achieve some advanced functionality. Through this low-coupling design, **NeoVM can be ported to any blockchain or even non-blockchain system used, increasing the utility of the smart contracts.**
+Ginagamit upang i-load ang blockchain ledger, mga digital asset, digital na pagkakakilanlan, matiyagang storage area, NeoFS, at iba pang pinagbabatayang mga serbisyo. Sila ay katulad ng mga birtwal na makina na binigay para sa mga birtwal na makina, pinapayagan ang mga matalinong kontrata na mag-access sa mga serbisyong ito sa run time upang makamit ang ilang advanced na functionality. Sa pamamagitan nitong low-coupling na disenyo, **ang NeoVM ay maaaring i-port sa anumang blockchain o kahit non-blockchain na sistemang ginamit, pinapataas ang kahalagahan ng mga matalinong kontrata.**
 
-**DevPack - Compiler and IDE plugin:**
+**DevPack - Compiler and IDE na plugin:**
 
-DevPack includes the high-level language compiler and the IDE plug-in. Because NeoVM's architecture is very similar to JVM and .NET Runtime, the compilers in DevPack can compile Java byte code and .NET MSIL into NeoVM's instruction set. Java / Kotlin, C# developers do not need to learn new languages and will be able to immediately start developing smart contracts in VS, Eclipse and other familiar IDE environments. **This greatly reduces the learning curve for developing smart contracts, allowing us to easily build a vibrant community around NeoContract.**
+Ang DevPack ay nagsasama ng mataas na lebel na language compiler at ng IDE na plug-in. Dahil ang arkitektura ng NeoVM ay sobrang katulad sa JVM at .NET Runtime, ang mga compiler sa DevPack ay maaaring mag-compile ng Java byte code at .NET MSIL sa instruction set ng NeoVM. Ang mga developer ng Java / Kotlin, C# ay hindi kailangang matuto ng bagong mga lengguwahe at pwede kaagad magsimulang mag-develop ng mga matalinong kontrata sa VS, Eclipse at ibang pamilyar na mga IDE environment. **Lubha nitong binabawasan ang mga learning curve para sa pag-develop ng mga matalinong kontrata, pinapayagan tayong madaling bumuo ng isang buhay na buhay na komunidad sa paligid ng NeoContract.**
 
-NeoContract can create a smart contract call tree through static analysis before running a smart contract. **Through the deterministic call tree, the NEO node can dynamically fragment the smart contract to achieve theoretically unlimited expansion**, which overcomes the "jamming effect" caused by the static fragmentation of other block chain systems.
+Ang NeoContract ay maaaring lumikha ng isang matalinong kontrata na call tree gamit ang static analysis bago magpatakbo ng isang matalinong kontrata. **Gamit ang deterministic na call tree, ang NEO node ay maaaring dinamikang i-fragment ang matalinong kontrata upang makamit ang batay sa teoryang walang limitasyong pagpapalawak**, na dinadaig ang "jamming effect" na sanhi ng static fragmentation ng ibang mga sistema ng block chain.
 
-### Cross-chain interoperability agreement: NeoX
+### Cross-chain interoperability na kasunduan: NeoX
 
-NeoX is a protocol that implements cross-chain interoperability. NeoX is divided into two parts: "cross-chain assets exchange protocol" and "cross-chain distributed transaction protocol."
+Ang NeoX ay isang protokol na nagpapatupad ng cross-chain interoperability. Ang NeoX ay nakahati sa dalawang bahagi: "cross-chain assets exchange na protokol" at "cross-chain distributed transaction na protokol."
 
-**Cross-chain assets exchange agreement:**
+**Cross-chain assets exchange na kasunduan:**
 
-NeoX has been extended on existing double-stranded atomic assets exchange protocols to allow multiple participants to exchange assets across different chains and to ensure that all steps in the entire transaction process succeed or fail together. In order to achieve this function, we need to use NeoContract function to create a contract account for each participant. If other blockchains are not compatible with NeoContract, they can be compatible with NeoX as long as they can provide simple smart contract functionality.
+Ang NeoX ay pinalawak sa umiiral na double-stranded na atomikong mga asset ng mga exchange protocol upang pahintulutan ang maramihang kalahok na magpalitan ng mga asset sa kabuuan ng magkaibang mga chain at upang siguraduhin na matagumpay ang lahat ng mga hakbang sa buong proseso ng transaksyon o sabay-sabay na mabigo. Upang makamit ang punsyon na ito, kailangan nating gumamit ng NeoContract na punsyon upang lumikha ng isang account na kontrata para sa bawat kalahok. Kung ang ibang mga blockchain ay hindi tumutugma sa NeoContract, sila ay maaaring magkatugma sa NeoX hangga't sila ay maaaring magbigay ng simpleng matalinong kontratang functionality.
 
-**Cross-chain distributed transaction protocol:**
+**Cross-chain distributed transaction na protokol:**
 
-Cross-chain distributed transactions mean that multiple steps of a transaction are scattered across different blockchains and that the consistency of the entire transaction is ensured. This is an extension of cross-chain assets exchange, extending the behavior of assets exchange into arbitrary behavior. In layman's terms, NeoX makes it possible for cross-chain smart contracts where a smart contract can perform different parts on multiple chains, either succeeding or reverting as a whole. This gives excellent possibilities for cross-chain collaborations and we are exploring cross-chain smart contract application scenarios.
+Ang cross-chain distributed na mga transaksyon ay nangangahulugan na ang maramihang hakbang ng isang transaksyon ay nakakalat sa kabuuan ng magkaibang mga blockchain at ang pagkakaalinsunod sa buong transaksyon ay natiyak. Ito ay isang ekstensyon ng cross-chain assets na pagpapalitan, pinapalawak ang pag-uugali ng assets na pagpapalitan sa arbitrary na pagkilos. Sa madaling salita, ang NeoX ay ginagawang posible para sa cross-chain na mga matalinong kontrata kung saan ang isang matalinong kontrata ay maaaring gumanap na magkaibang parte sa maramihang chain, alinman ay kasunod o pagpapanumbalik sa pangkabuuan. Nagbibigay ito ng mahusay na mga posibilidad para sa cross-chain na mga kolaborasyon at sinisiyasat namin ang mga pangyayari ng cross-chain na matalinong kontratang aplikasyon.
 
-### Distributed Storage Protocol: NeoFS
+### Ibinahaging Storage Protocol: NeoFS
 
-NeoFS is a distributed storage protocol that utilizes Distributed Hash Table (DHT) technology. NeoFS indexes the data through file content (Hash) rather than file path (URI). Large files will be divided into fixed-size data blocks that are distributed and stored in many different nodes.
+Ang NeoFS ay isang ibinahaging storage protocol na gumagamit ng Distributed Hash Table (DHT) na teknolohiya. Ang mga NeoFS ay nag-iindex nga datos gamit ang file content (Hash) sa halip ng file path (URI). Ang mga malaking file ay maaaring hatiin sa pirming laking datos na mga bloke na ibinahagi at nakaimbak sa iba't ibang mga node.
 
-The main problem with this type of system is the need to find a balance between redundancy and reliability. NeoFS plans to solve this contradiction by means of token incentives and the establishment of backbone nodes. Users can choose the reliability requirements of the file. Files with low reliability requirements can be stored and accessed for free or almost free. Stable and reliable services for files with high reliability requirement will be provided by backbone nodes.
+Ang pangunahing problema sa ganitong uri ng sistema ay ang pangangailangan ng paghahanap ng isang balanse sa kalabisan at pagkamaaasahan. Ang NeoFS ay nagpaplanong lutasin ang kontradiksyong ito sa pamamagitan ng mga token na insentibo at ang pagtatatag ng mga backbone node. Ang mga gumagamit ay maaaring pumili sa pagkamaaasahang mga kinakailangan ng file. Ang mga file na may mababang pagkamaaasahang mga kinakailangan ay maaaring iimbak at i-access nang libre o halos libre. Ang matatag at maaasahang mga serbisyo para sa mga file na may mataas na pagkamaaasahang mga kinakailangan ay ibibigay ng mga backbone node.
 
-NeoFS will serve as one of the InteropService interoperability services under the NeoContract system, enabling smart contracts to store large files on the blockchain and set access for those files. In addition, NeoFS can be combined with digital identity so that digital certificates used by digital identities can be assigned, sent, and revoked without a central server to manage them. In the future, the old block data can be stored in NeoFS, so that most of the full nodes can release the old data for better scalability and at the same time, ensure the integrity of historical data.
+Ang NeoFS ay magsisilbi bilang isa sa mga InteropService interoperability na serbisyo sa ilalim ng NeoContract na sistema, pinapayagan ang mga matalinong kontrata na mag-imbak ng malaking mga file sa blockchain at magtakda ng access para sa mga file na iyon. Sa karagdagan, ang NeoFS ay maaaring isama sa digital na pagkakakilanlan upang ang mga digital na sertipiko na ginagamit ng mga digital na pagkakakilanlan ay maaaring itinalaga, ipadala, at bawiin nang walang isang sentral na server na mamamahala sa kanila. Sa hinaharap, ang lumang block na datos ay maaaring iimbak sa NeoFS, upang ang karamihan sa buong mga node ay maaaring maglabas ng lumang datos para sa mas mabuting scalability at sa parehong pagkakataon, siguraduhin ang integridad ng makasaysayang datos.
 
-### Anti-quantum cryptography mechanism: NeoQS
+### Anti-quantum cryptography na mekanismo: NeoQS
 
-The emergence of quantum computers poses a major challenge to RSA and ECC-based cryptographic mechanisms. Quantum computers can solve the large number of decomposition problems (which RSA relies on) and the elliptic curve discrete logarithm (which ECC relies on) in a very short time. NeoQS (Quantum Safe) is a lattice-based cryptographic mechanism. At present, quantum computers do not have the ability to quickly solve the Shortest Vector Problem (SVP) and the Closest Vector Problem (CVP), which is considered to be the most reliable algorithm for resisting quantum computers.
+Ang paglitaw ng mga quantum na kompyuter ay pumupwesto ng isang pangunahing pagsubok sa RSA at ECC na nakabaseng kriptograpikong mga mekanismo. Ang mga quantum na kompyuter ay maaaring maglutas ng mataas na bilang ng decomposition na mga problema (na inaasahan ng RSA) at ang elliptic curve discrete na algoritmo (na inaasahan ng ECC) sa isang pinakamaikling panahon. Ang NeoQS (Quantum Safe) ay isang lattice-based cryptographic na mekanismo. Sa kasalukuyan, ang mga quantum na kompyuter ay walang abilidad na madaling maglutas ng Shortest Vector Problem (SVP) at ang Closest Vector Problem (CVP), na isinasaalang-alang bilang pinakamaaasahang algoritmo para sa paglaban ng mga quantum na kompyuter.
 
-## Summary
+## Buod
 
-NEO is a distributed network that combines digital assets, digital identities and smart contracts. The NEO system will use DBFT, NeoX, NeoFS, NeoQS and many other original technologies, as the infrastructure for the intelligent economy of the future.
+Ang NEO ay isang ibinahaging network na nagsasama ng mga digital asset, ang mga digital an pagkakakilanlan at mga matalinong kontrata. Ang NEO na sisteam ay gagamit ng DBFT, NeoX, NeoFS, NeoQS at marami pang ibang orihinal na mga teknolihiya, bilang imprastraktura para sa matalinong ekonomiya ng hinaharap.
